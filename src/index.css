@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 14% 89%;
+    --background-secondary: 36 18% 95%;
+    --foreground: 40 5% 17%;
+    --foreground-secondary: 40 4% 40%;
+
+    --card: 36 18% 95%;
+    --card-foreground: 40 5% 17%;
+
+    --popover: 36 18% 95%;
+    --popover-foreground: 40 5% 17%;
+
+    --primary: 40 5% 17%;
+    --primary-foreground: 36 14% 89%;
+
+    --secondary: 36 18% 95%;
+    --secondary-foreground: 40 5% 17%;
+
+    --muted: 36 10% 85%;
+    --muted-foreground: 40 4% 40%;
+
+    --accent: 11 63% 48%;
+    --accent-foreground: 36 14% 89%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 10% 81%;
+    --input: 36 10% 81%;
+    --ring: 12 64% 48%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 36 14% 89%;
+    --sidebar-foreground: 40 5% 17%;
+    --sidebar-primary: 40 5% 17%;
+    --sidebar-primary-foreground: 36 14% 89%;
+    --sidebar-accent: 36 18% 95%;
+    --sidebar-accent-foreground: 40 5% 17%;
+    --sidebar-border: 36 10% 81%;
+    --sidebar-ring: 12 64% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Helvetica, system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .font-editorial {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-style: italic;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Subtle warm tone for all images */
+img {
+  filter: 
+    sepia(12%) 
+    saturate(110%) 
+    hue-rotate(-8deg) 
+    brightness(0.97) 
+    contrast(1.06);
+}
