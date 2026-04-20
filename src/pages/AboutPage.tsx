@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import FadeIn from "@/components/FadeIn";
 
-import portraitImg from "@/assets/immersion-1.jpg";
-import journeyImg from "@/assets/transition.jpg";
-import materialImg from "@/assets/immersion-2.jpg";
-import siteImg from "@/assets/arch-2.jpg";
 
 const AboutPage = () => {
   return (

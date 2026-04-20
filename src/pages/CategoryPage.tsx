@@ -1,9 +1,11 @@
 import { useState, useCallback, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectGallery from "@/components/ProjectGallery";
+import NextExploration from "@/components/NextExploration";
+import { typography } from "@/lib/typography";
 import type { Project } from "@/data/projects";
 
 interface CategoryPageProps {
@@ -14,6 +16,10 @@ interface CategoryPageProps {
 const CategoryPage = ({ label, projects }: CategoryPageProps) => {
   const [activeId, setActiveId] = useState<string | null>(null);
   const projectRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const location = useLocation();
+
+  // Derive current category slug from pathname
+  const currentCategorySlug = location.pathname.replace('/', '');
 
   const handleSelect = useCallback((id: string) => {
     setActiveId(id);
@@ -59,14 +65,14 @@ const CategoryPage = ({ label, projects }: CategoryPageProps) => {
       <div className="max-w-content mx-auto px-6 md:px-10 py-12 md:py-20">
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 text-sm text-foreground-secondary hover:text-accent transition-colors duration-300 mb-12"
+          className={`group inline-flex items-center gap-2 ${typography.navLink} mb-12`}
         >
           <ArrowLeft className="w-4 h-4 group-hover:text-accent" />
           Back
         </Link>
 
         <FadeIn>
-          <h1 className="text-2xl md:text-4xl font-light tracking-tight mb-4">
+          <h1 className={`${typography.categoryTitle} mb-4`}>
             {label}
           </h1>
           <div className="w-12 h-px bg-border mb-2" />
@@ -104,18 +110,18 @@ const CategoryPage = ({ label, projects }: CategoryPageProps) => {
                   />
 
                   <div className="mt-4 max-w-2xl">
-                    <h2 className="text-lg md:text-xl font-medium mb-1">
+                    <h2 className={`${typography.subheading} mb-1`}>
                       {project.title}
                     </h2>
-                    <p className="text-sm text-foreground-secondary mb-2">
+                    <p className={`${typography.caption} text-foreground-secondary mb-2`}>
                       {project.location}
                     </p>
-                    <p className="text-xs text-foreground-secondary tracking-wide uppercase mb-3">
+                    <p className={`${typography.metadata} text-accent mb-3`}>
                       {project.role}
                     </p>
 
                     {project.description && (
-                      <p className="text-sm md:text-base leading-relaxed text-foreground/90">
+                      <p className={`${typography.body} text-foreground/90`}>
                         {project.description}
                       </p>
                     )}
@@ -127,12 +133,14 @@ const CategoryPage = ({ label, projects }: CategoryPageProps) => {
         </div>
       </div>
 
+      <NextExploration currentCategorySlug={currentCategorySlug} />
+
       <footer className="py-8 border-t border-border">
         <div className="max-w-content mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-xs text-foreground-secondary">
+          <p className={`${typography.metadata} text-foreground-secondary`}>
             © {new Date().getFullYear()} Rahul Gautam
           </p>
-          <p className="text-xs text-foreground-secondary">
+          <p className={`${typography.metadata} text-foreground-secondary`}>
             Built with natural materials and intention
           </p>
         </div>

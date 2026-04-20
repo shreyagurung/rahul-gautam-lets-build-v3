@@ -12,6 +12,7 @@ import FestivalSpacesPage from "./pages/FestivalSpacesPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 
 import SiteHeader from "./components/SiteHeader.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <SiteHeader />
         <Routes>
           <Route path="/" element={<Index />} />

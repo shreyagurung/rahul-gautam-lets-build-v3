@@ -2,19 +2,14 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import FadeIn from "@/components/FadeIn";
 import HoverCarousel from "@/components/HoverCarousel";
+import { typography } from "@/lib/typography";
 
 import heroImg from "@/assets/hero.jpg";
 import immersion1 from "@/assets/immersion-1.jpg";
 import immersion2 from "@/assets/immersion-2.jpg";
 import transitionImg from "@/assets/transition.jpg";
 
-import install1 from "@/assets/install-1.jpg";
-import install2 from "@/assets/install-2.jpg";
-import install3 from "@/assets/install-3.jpg";
 
-import festival1 from "@/assets/festival-1.jpg";
-import festival2 from "@/assets/festival-2.jpg";
-import festival3 from "@/assets/festival-3.jpg";
 
 const Index = () => {
   const scrollToWork = () => {
@@ -43,7 +38,7 @@ const Index = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative z-10 p-8 md:p-16 pb-16 md:pb-24"
         >
-          <h1 className="text-3xl md:text-5xl font-light tracking-tight text-background-secondary">
+          <h1 className={`${typography.pageTitle} text-background-secondary`}>
             Rahul Gautam
           </h1>
           <p className="mt-3 text-sm md:text-base text-background-secondary/80 tracking-wide">
@@ -57,18 +52,18 @@ const Index = () => {
         <div className="max-w-content mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="max-w-2xl">
-              <p className="font-editorial text-lg md:text-xl text-foreground-secondary mb-8">
+              <p className={`${typography.editorial} text-foreground-secondary mb-8`}>
                 Where material meets intention
               </p>
 
-              <p className="text-base md:text-lg leading-relaxed text-foreground/90">
+              <p className={`${typography.body} text-foreground/90`}>
                 Rahul Gautam works at the intersection of craft, landscape, and necessity.
                 Over the past decade, his practice has grown from building with bamboo to a
                 broader engagement with natural materials, mud, stone, thatch, and fiber,
                 shaped by the demands of each site and the hands that build it.
               </p>
 
-              <p className="mt-6 text-base md:text-lg leading-relaxed text-foreground/90">
+              <p className={`mt-6 ${typography.body} text-foreground/90`}>
                 His work resists the impulse to impose. Instead, it listens to terrain,
                 climate, community, and the quiet intelligence of materials that have been
                 used for centuries. The result is architecture and installations that feel
@@ -103,7 +98,7 @@ const Index = () => {
               </div>
 
               <div className="md:col-span-2 flex items-center">
-                <p className="font-editorial text-lg text-foreground-secondary leading-relaxed">
+                <p className={`${typography.editorial} text-foreground-secondary leading-relaxed`}>
                   Every joint holds a conversation between what the material wants to do
                   and what the space asks for.
                 </p>
@@ -134,11 +129,11 @@ const Index = () => {
           transition={{ duration: 1.2 }}
           className="relative z-10 text-center"
         >
-          <p className="text-background-secondary/70 text-xs tracking-[0.3em] uppercase mb-3">
+          <p className={`${typography.metadata} text-background-secondary/70 mb-3`}>
             Explore
           </p>
 
-          <p className="text-background-secondary text-2xl md:text-4xl font-light tracking-tight">
+          <p className={`${typography.sectionHeading} text-background-secondary`}>
             Creations
           </p>
 
@@ -158,7 +153,9 @@ const Index = () => {
           <div>
             <FadeIn>
               <Link to="/architecture">
-                <p className="text-sm uppercase mb-3">Architecture</p>
+                <p className={`${typography.metadata} mb-3 text-accent`}>
+                  Architecture
+                </p>
               </Link>
             </FadeIn>
 
@@ -225,7 +222,9 @@ const Index = () => {
           <div>
             <FadeIn>
               <Link to="/installations">
-                <p className="text-sm uppercase mb-3">Installations</p>
+                <p className={`${typography.metadata} mb-3 text-accent`}>
+                  Installations
+                </p>
               </Link>
             </FadeIn>
 
@@ -286,7 +285,9 @@ const Index = () => {
           <div>
             <FadeIn>
               <Link to="/festival-spaces">
-                <p className="text-sm uppercase mb-3">Festival Spaces</p>
+                <p className={`${typography.metadata} mb-3 text-accent`}>
+                  Festival Spaces
+                </p>
               </Link>
             </FadeIn>
 
@@ -352,34 +353,34 @@ const Index = () => {
         <div className="max-w-content mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="max-w-2xl">
-              <p className="font-editorial text-lg text-foreground-secondary mb-8">
+              <p className={`${typography.editorial} text-foreground-secondary mb-8`}>
                 Building is a form of listening
               </p>
 
-              <p className="text-base md:text-lg leading-relaxed text-foreground/90 mb-6">
+              <p className={`${typography.body} text-foreground/90 mb-6`}>
                 Each project begins with the site, its soil, its light, its people.
                 There is no fixed method, only a willingness to let the place speak first.
                 What emerges is negotiated between hand and material, between what is imagined
                 and what is possible.
               </p>
 
-              <p className="text-base md:text-lg leading-relaxed text-foreground/90">
+              <p className={`${typography.body} text-foreground/90`}>
                 If you are interested in working together or simply want to talk about
                 building with natural materials, I would be glad to hear from you.
               </p>
 
               <div className="mt-12 pt-8 border-t border-border">
-                <p className="text-sm text-foreground-secondary mb-1">Get in touch</p>
+                <p className={`${typography.caption} text-foreground-secondary mb-1`}>Get in touch</p>
                 <a
                   href="mailto:rahul@example.com"
-                  className="text-base hover:text-accent transition-colors duration-300"
+                  className={`${typography.body} hover:text-accent transition-colors duration-300`}
                 >
                   rahul@example.com
                 </a>
                 <div className="mt-6">
                   <Link
                     to="/about"
-                    className="text-sm text-foreground-secondary hover:text-accent transition-colors duration-300 tracking-wide"
+                    className={`${typography.navLink} tracking-wide`}
                   >
                     More about Rahul →
                   </Link>
@@ -393,10 +394,10 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="max-w-content mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-xs text-foreground-secondary">
+          <p className={`${typography.metadata} text-foreground-secondary`}>
             © {new Date().getFullYear()} Rahul Gautam
           </p>
-          <p className="text-xs text-foreground-secondary">
+          <p className={`${typography.metadata} text-foreground-secondary`}>
             Built with natural materials and intention
           </p>
         </div>
