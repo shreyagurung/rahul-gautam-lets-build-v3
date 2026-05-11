@@ -421,7 +421,7 @@ const CategoryPage = ({ label, projects }: CategoryPageProps) => {
           <p
             className={`${typography.metadata} text-foreground-secondary`}
           >
-            Built with natural materials and intention
+            Let's Build
           </p>
         </div>
       </footer>

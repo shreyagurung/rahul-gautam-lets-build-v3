@@ -133,7 +133,7 @@ Each project becomes a chance to test a new way of thinking through making. That
           </p>
 
           <p className={`${typography.sectionHeading} text-background-secondary`}>
-            Creations
+            Projects
           </p>
 
           <motion.div
@@ -471,7 +471,7 @@ Each project becomes a chance to test a new way of thinking through making. That
             © {new Date().getFullYear()} Rahul Gautam
           </p>
           <p className={`${typography.metadata} text-foreground-secondary`}>
-            Built with natural materials and intention
+            Let's Build
           </p>
         </div>
       </footer>
