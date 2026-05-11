@@ -51,23 +51,22 @@ const Index = () => {
       <section className="py-24 md:py-36 bg-background-secondary">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <FadeIn>
-            <div className="max-w-2xl">
-              <p className={`${typography.editorial} text-foreground-secondary mb-8`}>
-                Where material meets intention
+            <div className="w-full">
+              <p className={`${typography.editorial} text-foreground-secondary mb-6`}>
+                Built Through Collaboration
               </p>
 
-              <p className={`${typography.body} text-foreground/90`}>
-                Rahul Gautam works at the intersection of craft, landscape, and necessity.
-                Over the past decade, his practice has grown from building with bamboo to a
-                broader engagement with natural materials, mud, stone, thatch, and fiber,
-                shaped by the demands of each site and the hands that build it.
-              </p>
+              <p className={`${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
+Rahul Gautam’s practice is rooted in hands-on building, material intuition, and collaborative execution. After leaving an early career in the oil industry, years of travel across India led to a growing interest in how people build with what is locally available: bamboo, mud, scrap metal, temporary structures, and deeply place-based knowledge systems. That journey gradually shaped a practice grounded less in conventional construction and more in learning through making, observation, and working closely with people on-site.</p>
 
-              <p className={`mt-6 ${typography.body} text-foreground/90`}>
-                His work resists the impulse to impose. Instead, it listens to terrain,
-                climate, community, and the quiet intelligence of materials that have been
-                used for centuries. The result is architecture and installations that feel
-                both ancient and entirely present.
+              <p className={`mt-6 ${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
+Today, his work operates between design intent and physical execution across architecture, installations, and festival spaces. Rahul frequently takes on the role of execution lead, collaborating closely with architects, artists, designers, fabricators, engineers, contractors, and artisan teams to translate ambitious ideas into buildable realities. Many of the projects featured here have emerged through these collaborations, whose trust, rigor, and experimental approaches continue to shape the work through prototyping, structural improvisation, material adaptation, and collective problem-solving on-site.                
+              </p>
+              <p className={`mt-6 ${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
+From tea gardens in the Eastern Himalayas to music festivals in Arunachal Pradesh, from steel scrapyards in Ahmedabad to gallery spaces in Mumbai and Jeddah, the work spans a wide range of scales and environments. Across all of them, Rahul remains particularly drawn to projects that come with uncertainty, unusual constraints, and difficult execution challenges, approaching unfamiliar systems and demanding briefs as opportunities to experiment, adapt, and build differently through process, collaboration, and craft.              </p>
+             
+              <p className={`mt-6 ${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
+Each project becomes a chance to test a new way of thinking through making. That ongoing process of challenge, collaboration, and discovery continues to drive the practice forward.                
               </p>
             </div>
           </FadeIn>
@@ -150,200 +149,274 @@ const Index = () => {
         <div className="max-w-content mx-auto px-6 md:px-10 space-y-12">
 
           {/* Architecture */}
-          <div>
-            <FadeIn>
-              <Link to="/architecture">
-                <p className={`${typography.metadata} mb-3 text-accent`}>
-                  Architecture
-                </p>
-              </Link>
-            </FadeIn>
+<div>
+  <FadeIn>
+    <Link to="/architecture">
+      <p className={`${typography.metadata} mb-3 text-accent`}>
+        Architecture
+      </p>
+    </Link>
+  </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-              <FadeIn delay={0.1}>
-                <Link to="/architecture#tea-tourism-center" className="group block">
-                  <HoverCarousel
-                    images={[
-                      "/images/architecture/tea-tourism-center/cover.svg",
-                      "/images/architecture/tea-tourism-center/01.jpg",
-                      "/images/architecture/tea-tourism-center/02.jpg",
-                      "/images/architecture/tea-tourism-center/03.jpg",
-                      "/images/architecture/tea-tourism-center/04.jpg"
-                    ]}
-                    alt="Tea Tourism Center"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Tea Tourism Center
-                  </p>
-                </Link>
-              </FadeIn>
+    <FadeIn delay={0.1}>
+      <Link to="/architecture#tea-tourism-center" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/architecture/tea-tourism-center/cover.svg",
+            "/images/architecture/tea-tourism-center/01.jpg",
+            "/images/architecture/tea-tourism-center/02.jpg",
+            "/images/architecture/tea-tourism-center/03.jpg",
+            "/images/architecture/tea-tourism-center/04.jpg"
+          ]}
+          alt="Tea Tourism Center"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
 
-              <FadeIn delay={0.2}>
-                <Link to="/architecture#deepsthal-gurukulam-gym-pavilion" className="group block">
-                  <HoverCarousel
-                    images={[
-                      "/images/architecture/gym-pavillion/cover.jpg",
-                      "/images/architecture/gym-pavillion/01.jpg",
-                      "/images/architecture/gym-pavillion/02.jpg",
-                      "/images/architecture/gym-pavillion/03.jpg"
-                    ]}
-                    alt="Deepsthal Gurukulam Gym Pavilion"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Deepsthal Gurukulam Gym Pavilion
-                  </p>
-                </Link>
-              </FadeIn>
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Tea Tourism Center
+          </p>
 
-              <FadeIn delay={0.3}>
-                <Link to="/architecture#urmika-gazebo" className="group block">
-                  <HoverCarousel
-                    images={[
-                      "/images/architecture/urmika-gazebo/cover.jpg",
-                      "/images/architecture/urmika-gazebo/01.jpg",
-                      "/images/architecture/urmika-gazebo/02.jpg"
-                    ]}
-                    alt="Urmika Gazebo"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Urmika Gazebo
-                  </p>
-                </Link>
-              </FadeIn>
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with QX Design & Mianzi Global
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
 
-            </div>
-          </div>
+    <FadeIn delay={0.2}>
+      <Link to="/architecture#deepsthal-gurukulam-gym-pavilion" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/architecture/gym-pavillion/cover.jpg",
+            "/images/architecture/gym-pavillion/01.jpg",
+            "/images/architecture/gym-pavillion/02.jpg",
+            "/images/architecture/gym-pavillion/03.jpg"
+          ]}
+          alt="Deepsthal Gurukulam Gym Pavilion"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
 
-          {/* Installations */}
-          <div>
-            <FadeIn>
-              <Link to="/installations">
-                <p className={`${typography.metadata} mb-3 text-accent`}>
-                  Installations
-                </p>
-              </Link>
-            </FadeIn>
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Deepsthal Gurukulam Gym Pavilion
+          </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <FadeIn delay={0.1}>
-                <Link to="/installations#chaal" className="group block">
-                  <HoverCarousel 
-                    images={[
-                      "/images/installations/chaal/cover.jpeg",
-                      "/images/installations/chaal/01.jpeg",
-                      "/images/installations/chaal/02.jpeg",
-                      "/images/installations/chaal/03.jpeg"
-                    ]} 
-                    alt="Chaal"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">Chaal</p>
-                </Link>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <Link to="/installations#min-rukam" className="group block">
-                  <HoverCarousel
-                    images={[
-                      "/images/installations/min-rukam/cover.jpeg",
-                      "/images/installations/min-rukam/01.jpeg",
-                      "/images/installations/min-rukam/02.jpeg",
-                      "/images/installations/min-rukam/03.jpeg"
-                    ]}
-                    alt="Min-Rukam"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Min-Rukam
-                  </p>
-                </Link>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <Link to="/installations#make-shift" className="group block">
-                  <HoverCarousel
-                    images={[
-                      "/images/installations/make-shift/cover.jpeg",
-                      "/images/installations/make-shift/01.jpeg",
-                      "/images/installations/make-shift/02.jpeg",
-                      "/images/installations/make-shift/03.jpeg"
-                    ]}
-                    alt="Make-Shift"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Make-Shift
-                  </p>
-                </Link>
-              </FadeIn>
-            </div>
-          </div>
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with QX Design & Ovoid Atelier
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
 
-          {/* Festival Spaces */}
-          <div>
-            <FadeIn>
-              <Link to="/festival-spaces">
-                <p className={`${typography.metadata} mb-3 text-accent`}>
-                  Festival Spaces
-                </p>
-              </Link>
-            </FadeIn>
+    <FadeIn delay={0.3}>
+      <Link to="/architecture#urmika-gazebo" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/architecture/urmika-gazebo/cover.jpg",
+            "/images/architecture/urmika-gazebo/01.jpg",
+            "/images/architecture/urmika-gazebo/02.jpg"
+          ]}
+          alt="Urmika Gazebo"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <FadeIn delay={0.1}>
-                <Link to="/festival-spaces#campone-campsite-2022" className="group block">
-                  <HoverCarousel 
-                    images={[
-                      "/images/festival-spaces/campone-campsite-2022/cover.jpeg",
-                      "/images/festival-spaces/campone-campsite-2022/01.jpeg",
-                      "/images/festival-spaces/campone-campsite-2022/02.jpeg",
-                      "/images/festival-spaces/campone-campsite-2022/03.jpeg"
-                    ]} 
-                    alt="Campone Campsite"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">Campone Campsite</p>
-                </Link>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <Link to="/festival-spaces#monyul-gathering-2020" className="group block">
-                  <HoverCarousel
-                    images={[
-                       "/images/festival-spaces/monyul-gathering-2020/cover.jpeg",
-                      "/images/festival-spaces/monyul-gathering-2020/01.jpeg",
-                      "/images/festival-spaces/monyul-gathering-2020/02.jpeg",
-                      "/images/festival-spaces/monyul-gathering-2020/03.jpeg"
-                    ]}
-                    alt="Monyul Gathering"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Monyul Gathering
-                  </p>
-                </Link>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <Link to="/festival-spaces#ziro-festival-of-music-2023" className="group block">
-                  <HoverCarousel
-                    images={[
-                       "/images/festival-spaces/ziro-festival-2023/cover.jpeg",
-                      "/images/festival-spaces/ziro-festival-2023/01.jpeg",
-                      "/images/festival-spaces/ziro-festival-2023/02.jpeg",
-                      "/images/festival-spaces/ziro-festival-2023/03.jpeg"
-                    ]}
-                    alt="Ziro Festival 2023"
-                    className="w-full h-[30vh] md:h-[35vh]"
-                  />
-                  <p className="mt-3 text-sm font-medium group-hover:text-accent">
-                    Ziro Festival 2023
-                  </p>
-                </Link>
-              </FadeIn>
-            
-            </div>
-          </div>
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Urmika Gazebo
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with QX Design
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+  </div>
+</div>
+
+{/* Installations */}
+<div>
+  <FadeIn>
+    <Link to="/installations">
+      <p className={`${typography.metadata} mb-3 text-accent`}>
+        Installations
+      </p>
+    </Link>
+  </FadeIn>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+    <FadeIn delay={0.1}>
+      <Link to="/installations#chaal" className="group block">
+        <HoverCarousel 
+          images={[
+            "/images/installations/chaal/cover.jpeg",
+            "/images/installations/chaal/01.jpeg",
+            "/images/installations/chaal/02.jpeg",
+            "/images/installations/chaal/03.jpeg"
+          ]} 
+          alt="Chaal"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Chaal
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with Asim Waqif
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+    <FadeIn delay={0.2}>
+      <Link to="/installations#min-rukam" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/installations/min-rukam/cover.jpeg",
+            "/images/installations/min-rukam/01.jpeg",
+            "/images/installations/min-rukam/02.jpeg",
+            "/images/installations/min-rukam/03.jpeg"
+          ]}
+          alt="Min-Rukam"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Min-Rukam
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with Asim Waqif
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+    <FadeIn delay={0.3}>
+      <Link to="/installations#make-shift" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/installations/make-shift/cover.jpeg",
+            "/images/installations/make-shift/01.jpeg",
+            "/images/installations/make-shift/02.jpeg",
+            "/images/installations/make-shift/03.jpeg"
+          ]}
+          alt="Make-Shift"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Make-Shift
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with Asim Waqif
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+  </div>
+</div>
+
+{/* Festival Spaces */}
+<div>
+  <FadeIn>
+    <Link to="/festival-spaces">
+      <p className={`${typography.metadata} mb-3 text-accent`}>
+        Festival Spaces
+      </p>
+    </Link>
+  </FadeIn>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+    <FadeIn delay={0.1}>
+      <Link to="/festival-spaces#campone-campsite-2022" className="group block">
+        <HoverCarousel 
+          images={[
+            "/images/festival-spaces/campone-campsite-2022/cover.jpeg",
+            "/images/festival-spaces/campone-campsite-2022/01.jpeg",
+            "/images/festival-spaces/campone-campsite-2022/02.jpeg",
+            "/images/festival-spaces/campone-campsite-2022/03.jpeg"
+          ]} 
+          alt="Campone Campsite"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            CampONE Campsite
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with ChaloHoppo, Experience Destination & CampX
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+    <FadeIn delay={0.2}>
+      <Link to="/festival-spaces#monyul-gathering-2020" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/festival-spaces/monyul-gathering-2020/cover.jpeg",
+            "/images/festival-spaces/monyul-gathering-2020/01.jpeg",
+            "/images/festival-spaces/monyul-gathering-2020/02.jpeg",
+            "/images/festival-spaces/monyul-gathering-2020/03.jpeg"
+          ]}
+          alt="Monyul Gathering"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Monyul Gathering
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with Hum & Further Beyond Foundation
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+    <FadeIn delay={0.3}>
+      <Link to="/festival-spaces#ziro-festival-of-music-2023" className="group block">
+        <HoverCarousel
+          images={[
+            "/images/festival-spaces/ziro-festival-2023/cover.jpeg",
+            "/images/festival-spaces/ziro-festival-2023/01.jpeg",
+            "/images/festival-spaces/ziro-festival-2023/02.jpeg",
+            "/images/festival-spaces/ziro-festival-2023/03.jpeg"
+          ]}
+          alt="Ziro Festival 2023"
+          className="w-full h-[30vh] md:h-[35vh]"
+        />
+
+        <div className="mt-3">
+          <p className="text-sm font-normal group-hover:text-accent">
+            Ziro Festival 2023
+          </p>
+
+          <p className="text-[12px] italic text-foreground/60 mt-1">
+            with QX Design
+          </p>
+        </div>
+      </Link>
+    </FadeIn>
+
+  </div>
+</div>
 
         </div>
       </section>
@@ -357,14 +430,14 @@ const Index = () => {
                 Building is a form of listening
               </p>
 
-              <p className={`${typography.body} text-foreground/90 mb-6`}>
+              <p className={`${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
                 Each project begins with the site, its soil, its light, its people.
                 There is no fixed method, only a willingness to let the place speak first.
                 What emerges is negotiated between hand and material, between what is imagined
                 and what is possible.
               </p>
 
-              <p className={`${typography.body} text-foreground/90`}>
+              <p className={`${typography.body} text-foreground/90 mb-6 text-[12px] md:text-[14px]`}>
                 If you are interested in working together or simply want to talk about
                 building with natural materials, I would be glad to hear from you.
               </p>

@@ -29,20 +29,24 @@ const ProjectCard = ({ project, featured = false }: ProjectCardProps) => {
         </div>
 
         <div className="mt-4 max-w-2xl">
-          <h3 className="text-lg md:text-xl font-medium mb-1">
+          <h3 className="text-lg md:text-xl font-medium leading-tight mb-1">
             {project.title}
           </h3>
+
+          <p className="text-[12px] md:text-[14px] italic text-foreground/60 mb-2">
+            {project.collaborator}
+          </p>
 
           <p className="text-sm text-foreground-secondary mb-2">
             {project.location}
           </p>
 
-          <p className="text-xs text-foreground-secondary tracking-wide uppercase mb-3">
+          <p className="text-[10px] md:text-[11px] tracking-[0.14em] uppercase text-foreground-secondary mb-3">
             {project.role}
           </p>
 
           {project.description && (
-            <p className="text-sm md:text-base leading-relaxed text-foreground/90">
+            <p className="text-sm md:text-[15px] leading-relaxed text-foreground/90">
               {project.description}
             </p>
           )}
