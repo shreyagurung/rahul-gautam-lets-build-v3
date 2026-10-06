@@ -59,7 +59,7 @@ The site is organised around:
 ## Credits
 
 **Rahul Gautam**
-Nature-Inspired Builder
+Builder
 
 Portfolio design and development by the project team.
 
